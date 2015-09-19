@@ -1,0 +1,32 @@
+<h2> 공지사항 페이지입니다. </h2>
+
+
+<div class="col-xs-12 col-lg-10" style="left:10%; margin-top:30px">
+  <div style="background-color: #011655; padding-left:10px; padding-top:10px; width:100%; height:40px; color:white">공지사항  게시판</div>
+  <div>
+    <table class="table table-hover" style="border-bottom: 1px solid grey">
+      <tr style="border-bottom: 1px solid grey">
+        <th width=50><p align="center">번호</p></th>
+        <th width=320><p align="center">제목</p></th>
+        <th width=100><p align="center">글쓴이</p></th>
+        <th width=100><p align="center">등록일</p></th>
+        <th width=100><p align="center">조회수</p></th>
+      </tr>
+      <% @output_text.each do |x| %>
+        <% unless x.title.nil? %>
+          <tr style="cursor:pointer; border-bottom: 1px solid grey;" onclick="location.href='/home/notice_output/<%= x.id %>'">
+            <td width=50><p align="center"><%=x.id%></p></td>
+            <td width=320><p align="center"><%=x.title%></p></td>
+            <td width=100><p align="center"><%=x.writer%></p></td>
+            <td width=100><p align="center"><%=x.created_at%></p></td>
+            <td width=100><p align="center">1</p></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+  <a href="/home/notice_input"<button style="float:right" type="button" class="btn btn-primary">글쓰기</button></a>
+</div>
+
+
+

@@ -1,0 +1,22 @@
+<h2> 공지사항 페이지입니다. </h2>
+
+<div class="col-xs-12 col-md-10" style="left:10%; margin-top:50px; padding-bottom:20px;">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        글 작성 | 공지 게시판
+      </div>
+      <div class="panel-body">
+
+        <form action="/home/notice" method="POST">
+            <label>제목</label>
+            <input type="text" class="form-control" name="notice_title">
+            <label>작성자</label>
+            <input type="text" class="form-control" name="notice_writer">
+            <label>본문</label>
+            <textarea class="form-control" rows="5" cols="40" name="notice_content"></textarea>
+            <center><button class="btn btn-default" type="submit" style="color:black; margin-top:10px;">글쓰기</button></center>
+        </form>
+
+      </div>
+    </div>
+</div>
